@@ -1,0 +1,25 @@
+﻿{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+
+    "alwaysStrict": true,
+
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "dom",
+      "es5",
+      "es2015.promise"
+    ],
+
+    "allowJs": true,
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "sourceMap": true
+  },
+
+  "include": [ "./Scripts/*" ],
+  "compileOnSave": false
+}

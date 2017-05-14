@@ -11,15 +11,30 @@
 
     module.exports = {
         // Точка входа в приложение
-        entry: "./Scripts/main.js",
+        entry: "./Scripts/main.ts",
 
         // Выходной файл
         output: {
             filename: 'script.js',
             path: path.resolve(__dirname, bundleFolder)
         },
+        module: {
+          rules: [
+            {
+              test: /\.tsx?$/,
+              loader: "ts-loader",
+              exclude: /node_modules/,
+            },
+          ]
+        },
+        resolve: {
+            extensions: [".tsx", ".ts", ".js"]
+        },
         plugins: [
             new CleanWebpackPlugin([bundleFolder])
-        ]
+        ],
+        // Включаем генерацию отладочной информации внутри выходного файла
+        // (Нужно для работы отладки клиентских скриптов)
+        devtool: "inline-source-map"
     };
 }

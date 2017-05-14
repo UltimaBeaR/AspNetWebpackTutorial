@@ -26,4 +26,8 @@
   <ItemGroup>
     <None Remove=".gitignore" />
   </ItemGroup>
+
+  <PropertyGroup>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+  </PropertyGroup>
 </Project>
