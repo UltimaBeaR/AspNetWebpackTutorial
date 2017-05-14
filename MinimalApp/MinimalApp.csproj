@@ -19,4 +19,7 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="npm-debug.log" />
+  </ItemGroup>
 </Project>
