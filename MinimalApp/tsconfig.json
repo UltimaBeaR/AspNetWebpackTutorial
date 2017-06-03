@@ -1,6 +1,11 @@
 ﻿{
   "compilerOptions": {
-    "noImplicitAny": false,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+
     "noEmitOnError": true,
     "removeComments": false,
 
@@ -8,9 +13,8 @@
 
     "allowSyntheticDefaultImports": true,
     "lib": [
-      "dom",
-      "es5",
-      "es2015.promise"
+      "es2015",
+      "dom"
     ],
 
     "allowJs": true,
@@ -18,8 +22,5 @@
     "module": "es2015",
     "moduleResolution": "node",
     "sourceMap": true
-  },
-
-  "include": [ "./Scripts/*" ],
-  "compileOnSave": false
+  }
 }
