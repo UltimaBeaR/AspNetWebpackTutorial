@@ -27,6 +27,10 @@
     <None Remove=".gitignore" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="Frontend\ngApp\Components\helloWorld\template.html" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
   </PropertyGroup>
