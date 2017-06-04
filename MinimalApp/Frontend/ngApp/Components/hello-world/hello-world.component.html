@@ -1,0 +1,5 @@
+﻿<ul>
+    <li *ngFor="let character of hello">{{character}}</li>
+</ul>
+<textarea #textarea>world!</textarea>
+<button (click)="doSomething(textarea.value)">Click here</button>
