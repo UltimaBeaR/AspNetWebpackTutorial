@@ -5,12 +5,12 @@ import 'core-js/es7/reflect';
 import 'zone.js/dist/zone';
 
 // Глобальные стили
-import './styles/global.scss';
+import 'styles/global.scss';
 
 // Загрузка angular приложения (указывается основной angular модуль для загрузки)
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { MainModule } from './ngApp/Modules/mainModule';
+import { MainModule } from 'ngApp/Modules/main.module';
 
 platformBrowserDynamic().bootstrapModule(MainModule);

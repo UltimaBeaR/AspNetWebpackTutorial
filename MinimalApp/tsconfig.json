@@ -1,5 +1,7 @@
 ﻿{
   "compilerOptions": {
+    "baseUrl": "./Frontend",
+
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
 

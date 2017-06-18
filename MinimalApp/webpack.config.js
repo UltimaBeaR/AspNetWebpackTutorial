@@ -15,6 +15,9 @@ const CleanPlugin = require('clean-webpack-plugin');
 // Плагин для вытаскивания .css в виде файлов
 const ExtractCSS = require('extract-text-webpack-plugin');
 
+// Для того, чтобы у typescript работал baseUrl в tsconfig для вебпака
+const TsConfigPathsPlugin = require('awesome-typescript-loader').TsConfigPathsPlugin;
+
 // Папка с входными (исходными) файлами скриптов и другими вещами, связанными с фронтендом
 const sourceFolderName = "Frontend";
 
@@ -42,7 +45,7 @@ module.exports = {
             // Typescript файлы
             {
                 test: /\.tsx?$/,
-                loader: "ts-loader",
+                loader: "awesome-typescript-loader",
                 exclude: /node_modules/,
             },
 
@@ -82,7 +85,8 @@ module.exports = {
     },
     resolve: {
         // Чтобы при импорте не указывать расширения
-        extensions: [".tsx", ".ts", ".js"]
+        extensions: [".tsx", ".ts", ".js"],
+        plugins: [ new TsConfigPathsPlugin() ]
     },
     plugins: [
         // Пишет в консоль время, когда вебпак начинает перестроение (полезно для watch режима)
